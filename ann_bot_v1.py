@@ -188,7 +188,6 @@ def morshini(call):
     item4 = types.InlineKeyboardButton("Вокруг губ", callback_data='Vokrug_gub')
 
     markup.add(item1, item2, item3, item4)
-
     bot.send_message(call.message.chat.id, '*Морщины где?*', reply_markup=markup, parse_mode="Markdown")
 
 
@@ -200,7 +199,6 @@ def lob(call):
     item15 = types.InlineKeyboardButton("Филлер", callback_data='Filler')
 
     markup.add(item13, item14, item15)
-
     bot.send_message(call.message.chat.id, '_Выберите процедуру_↓', reply_markup=markup,
                      parse_mode="Markdown")
 
@@ -273,7 +271,6 @@ def vokrug_glaz(call):
     item17 = types.InlineKeyboardButton("Биоревитализация", callback_data='Biorevit_other')
 
     markup.add(item16, item17)
-
     bot.send_message(call.message.chat.id, '_Выберите процедуру_↓', reply_markup=markup,
                      parse_mode="Markdown")
 
@@ -307,7 +304,6 @@ def nosogubnie(call):
     item18 = types.InlineKeyboardButton("Липолитики", callback_data='Lipolitiki')
 
     markup.add(item15, item18)
-
     bot.send_message(call.message.chat.id, '_Выберите процедуру_↓', reply_markup=markup,
                      parse_mode="Markdown")
 
@@ -336,7 +332,6 @@ def vokrug_gub(call):
     item15 = types.InlineKeyboardButton("Филлер", callback_data='Filler')
 
     markup.add(item15)
-
     bot.send_message(call.message.chat.id, '_Выберите процедуру_↓', reply_markup=markup,
                      parse_mode="Markdown")
 
@@ -350,7 +345,6 @@ def akne(call):
     item7 = types.InlineKeyboardButton("Мезотерапия", callback_data='Mezoterapia')
 
     markup.add(item5, item6, item7)
-
     bot.send_message(call.message.chat.id, '_Рекомендуемые процедуры_↓', reply_markup=markup,
                      parse_mode="Markdown")
 
@@ -362,7 +356,6 @@ def piling(call):
     item9 = types.InlineKeyboardButton("Срединный", callback_data='Sredinniy')
 
     markup.add(item8, item9)
-
     bot.send_message(call.message.chat.id, '_Виды пилинга_↓', reply_markup=markup,
                      parse_mode="Markdown")
 
@@ -372,7 +365,6 @@ def poverhnostniy(call):
     item35 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Poverhnostniy_info')
 
     markup.add(item35)
-
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Поверхностный"._\n', parse_mode="Markdown")
     bot.send_message(call.message.chat.id, '*Миндальный:* 2500₽\n'
                                            '*Салициловый:* 2500₽\n'
@@ -404,7 +396,6 @@ def sredinniy(call):
     item36 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Sredinniy_info')
 
     markup.add(item36)
-
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Срединный"._\n', parse_mode="Markdown")
     bot.send_message(call.message.chat.id, '*Prx-t33:* 3800₽\n'
                                            '*Armorique:* 3000₽\n'
@@ -437,7 +428,6 @@ def chistka_lica(call):
     item40 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Chistka_lica_info')
 
     markup.add(item40)
-
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Чистка лица"._\n', parse_mode="Markdown")
     bot.send_message(call.message.chat.id, '*Чистка с химическим пилингом:* 3500₽\n'
                                            '*Ультразвуковая чистка:* 2800₽',
@@ -459,7 +449,6 @@ def mezoterapia(call):
     item41 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Mezoterapia_info')
 
     markup.add(item41)
-
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Мезотерапия"._\n', parse_mode="Markdown")
     bot.send_message(call.message.chat.id, '*Локальное введение антибактериального препарата:* 300₽\n'
                                            '*Мезотерапия Анти-акне:* 1500₽',
@@ -482,7 +471,6 @@ def vipadenie(call):
     item20 = types.InlineKeyboardButton("Мезотерапия", callback_data='Mezoterapia_dermaheal')
 
     markup.add(item20)
-
     bot.send_message(call.message.chat.id, '_Вам подойдёт_↓', reply_markup=markup,
                      parse_mode="Markdown")
 
@@ -492,7 +480,6 @@ def mezoterapia_dermaheal(call):
     item34 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Mezoterapia_dermaheal_info')
 
     markup.add(item34)
-
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Мезотерапия"._\n', parse_mode="Markdown")
     bot.send_message(call.message.chat.id, '*Dermaheal HL:* 1500₽',
                      reply_markup=markup, parse_mode="Markdown")
@@ -514,7 +501,6 @@ def pigmentacia(call):
     item11 = types.InlineKeyboardButton("Мезотерапия", callback_data='Mezoterapia_pigment')
 
     markup.add(item10, item11)
-
     bot.send_message(call.message.chat.id, '_Выберите процедуру_↓', reply_markup=markup,
                      parse_mode="Markdown")
 
@@ -526,7 +512,6 @@ def piling_pigment(call):
     item9 = types.InlineKeyboardButton("Срединный", callback_data='Sredinniy')
 
     markup.add(item12, item9)
-
     bot.send_message(call.message.chat.id, '_Виды пилинга_↓', reply_markup=markup,
                      parse_mode="Markdown")
 
@@ -536,7 +521,6 @@ def poverhnostniy_pigment(call):
     item37 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Poverhnostniy_pigment_info')
 
     markup.add(item37)
-
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Поверхностный"._\n', parse_mode="Markdown")
     bot.send_message(call.message.chat.id, '*Гликолевый пилинг:* 2500₽',
                      reply_markup=markup, parse_mode="Markdown")
@@ -555,7 +539,6 @@ def mezoterapia_pigment(call):
     item38 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Mezoterapia_pigment_info')
 
     markup.add(item38)
-
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Мезотерапия"._\n', parse_mode="Markdown")
     bot.send_message(call.message.chat.id, '*F-radiance:* 1500₽',
                      reply_markup=markup, parse_mode="Markdown")
@@ -579,7 +562,6 @@ def postakne(call):
     item21 = types.InlineKeyboardButton("Карбокситерапия", callback_data='Carboxi')
 
     markup.add(item8, item19, item21)
-
     bot.send_message(call.message.chat.id, '_Выберите процедуру_↓', reply_markup=markup,
                      parse_mode="Markdown")
 
@@ -589,7 +571,6 @@ def carboxi(call):
     item39 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Carboxi_info')
 
     markup.add(item39)
-
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Карбокситерапия"._\n', parse_mode="Markdown")
     bot.send_message(call.message.chat.id, '*Неинвазивная:* 1800₽',
                      reply_markup=markup, parse_mode="Markdown")
@@ -604,13 +585,11 @@ def carboxi_info(call):
 
 # ВТОРОЙ ПОДБОРОДОК
 def vtoroy_podborodok(call):
-    bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Второй подбородок"._\n',
-                     parse_mode="Markdown")
+    bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Второй подбородок"._\n', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
     item18 = types.InlineKeyboardButton("Липолитики", callback_data='Lipolitiki')
 
     markup.add(item18)
-
     bot.send_message(call.message.chat.id, '_Выберите процедуру_↓', reply_markup=markup,
                      parse_mode="Markdown")
 
