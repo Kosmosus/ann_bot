@@ -88,7 +88,7 @@ def answer(call):
             elif call.data == 'Vokrug_glaz':
                 vokrug_glaz(call)
             elif call.data == 'Botox_other':
-                botox_othet(call)
+                botox_other(call)
             elif call.data == 'Botox_info':
                 botox_info(call)
             elif call.data == 'Biorevit_other':
@@ -176,6 +176,184 @@ def answer(call):
 
     except Exception as e:
         print(repr(e))
+
+
+# МОРЩИНЫ
+def morshini(call):
+    bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Морщины"._', parse_mode="Markdown")
+    markup = types.InlineKeyboardMarkup(row_width=2)
+    item1 = types.InlineKeyboardButton("Лоб", callback_data='Lob')
+    item2 = types.InlineKeyboardButton("Вокруг глаз", callback_data='Vokrug_glaz')
+    item3 = types.InlineKeyboardButton("Носогубные", callback_data='Nosogubnie')
+    item4 = types.InlineKeyboardButton("Вокруг губ", callback_data='Vokrug_gub')
+
+    markup.add(item1, item2, item3, item4)
+
+    bot.send_message(call.message.chat.id, '*Морщины где?*', reply_markup=markup, parse_mode="Markdown")
+
+
+def lob(call):
+    pass
+
+
+def botox(call):
+    pass
+
+
+def botox_info(call):
+    pass
+
+
+def biorevit(call):
+    pass
+
+
+def biorevit_info(call):
+    pass
+
+
+def filler(call):
+    pass
+
+
+def filler_info(call):
+    pass
+
+
+def vokrug_glaz(call):
+    pass
+
+
+def botox_other(call):
+    pass
+
+
+def botox_info(call):
+    pass
+
+
+def biorevit_other(call):
+    pass
+
+
+def biorevit_info(call):
+    pass
+
+
+def nosogubnie(call):
+    pass
+
+
+def filler(call):
+    pass
+
+
+def lipolitiki(call):
+    pass
+
+
+def lipolitiki_info(call):
+    pass
+
+def vokrug_gub(call):
+    pass
+
+
+# АКНЕ
+def akne(call):
+    pass
+
+
+def piling(call):
+    pass
+
+
+def poverhnostniy(call):
+    pass
+
+
+def poverhnostniy_info(call):
+    pass
+
+
+def sredinniy(call):
+    pass
+
+
+def sredinniy_info(call):
+    pass
+
+
+def chistka_lica(call):
+    pass
+
+
+def chistka_lica_info(call):
+    pass
+
+
+def mezoterapia(call):
+    pass
+
+
+def mezoterapia_info(call):
+    pass
+
+
+# ВЫПАДЕНИЕ ВОЛОС
+def vipadenie(call):
+    pass
+
+
+def mezoterapia_dermaheal(call):
+    pass
+
+
+def mezoterapia_dermaheal_info(call):
+    pass
+
+
+# ПИГМЕНТАЦИЯ
+def pigmentacia(call):
+    pass
+
+
+def piling_pigment(call):
+    pass
+
+
+def poverhnostniy_pigment(call):
+    pass
+
+
+def poverhnostniy_pigment_info(call):
+    pass
+
+
+def mezoterapia_pigment(call):
+    pass
+
+
+def mezoterapia_pigment_info(call):
+    pass
+
+
+# ПОСТАКНЕ
+def postakne(call):
+    pass
+
+
+def carboxi(call):
+    pass
+
+
+def carboxi_info(call):
+    pass
+
+
+# ВТОРОЙ ПОДБОРОДОК
+def vtoroy_podborodok(call):
+    pass
 
 
 
