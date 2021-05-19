@@ -183,6 +183,10 @@ def answer(call):
 
 # МОРЩИНЫ
 def morshini(call):
+    # Картинка
+    photo = open('static/morshini.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo)
+
     markup = types.InlineKeyboardMarkup(row_width=2)
     item1 = types.InlineKeyboardButton("Лоб", callback_data='Lob')
     item2 = types.InlineKeyboardButton("Вокруг глаз", callback_data='Vokrug_glaz')
@@ -206,6 +210,10 @@ def lob(call):
 
 
 def botox(call):
+    # Картинка
+    photo = open('static/botox.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo)
+
     markup = types.InlineKeyboardMarkup(row_width=1)
     item30 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Botox_info')
 
@@ -227,6 +235,10 @@ def botox_info(call):
 
 
 def biorevit(call):
+    # Картинка
+    photo = open('static/biorevit.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo)
+
     markup = types.InlineKeyboardMarkup(row_width=1)
     item31 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Biorevit_info')
 
@@ -248,6 +260,10 @@ def biorevit_info(call):
 
 
 def filler(call):
+    # Картинка
+    photo = open('static/filler.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo)
+
     markup = types.InlineKeyboardMarkup(row_width=1)
     item32 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Filler_info')
 
