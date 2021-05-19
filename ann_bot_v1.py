@@ -469,7 +469,8 @@ def mezoterapia_dermaheal(call):
 
     markup.add(item34)
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Мезотерапия"._\n\n'
-                                           '*Dermaheal HL:* 1500₽', reply_markup=markup, parse_mode="Markdown")
+                                           '*Dermaheal HL:* 1500₽\n'
+                                           '*Hair X Peptide:* 3000₽', reply_markup=markup, parse_mode="Markdown")
 
 
 def mezoterapia_dermaheal_info(call):
