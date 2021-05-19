@@ -79,14 +79,6 @@ def answer(call):
                 botox(call)
             elif call.data == 'Botox_info':
                 botox_info(call)
-            elif call.data == 'Biorevit':
-                biorevit(call)
-            elif call.data == 'Biorevit_info':
-                biorevit_info(call)
-            elif call.data == 'Filler':
-                filler(call)
-            elif call.data == 'Filler_info':
-                filler_info(call)
             # 2.Вокруг глаз.
             elif call.data == 'Vokrug_glaz':
                 vokrug_glaz(call)
@@ -103,8 +95,6 @@ def answer(call):
                 nosogubnie(call)
             elif call.data == 'Filler':
                 filler(call)
-            elif call.data == 'Lipolitiki':
-                lipolitiki(call)
             elif call.data == 'Lipolitiki_info':
                 lipolitiki_info(call)
             # 4.Вокруг губ.
@@ -201,10 +191,8 @@ def morshini(call):
 def lob(call):
     markup = types.InlineKeyboardMarkup(row_width=1)
     item13 = types.InlineKeyboardButton("Ботокс", callback_data='Botox')
-    item14 = types.InlineKeyboardButton("Биоревитализация", callback_data='Biorevit')
-    item15 = types.InlineKeyboardButton("Филлер", callback_data='Filler')
 
-    markup.add(item13, item14, item15)
+    markup.add(item13)
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Лоб"._\n\n'
                                            '*Выберите процедуру* ↓', reply_markup=markup, parse_mode="Markdown")
 
@@ -313,9 +301,8 @@ def biorevit_other(call):
 def nosogubnie(call):
     markup = types.InlineKeyboardMarkup(row_width=1)
     item15 = types.InlineKeyboardButton("Филлер", callback_data='Filler')
-    item18 = types.InlineKeyboardButton("Липолитики", callback_data='Lipolitiki')
 
-    markup.add(item15, item18)
+    markup.add(item15)
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Носогубные"._\n\n'
                                            '*Выберите процедуру* ↓', reply_markup=markup, parse_mode="Markdown")
 
