@@ -280,6 +280,10 @@ def vokrug_glaz(call):
 
 
 def botox_other(call):
+    # Картинка
+    photo = open('static/botox_other.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo)
+
     markup = types.InlineKeyboardMarkup(row_width=1)
     item30 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Botox_info')
 
@@ -290,6 +294,10 @@ def botox_other(call):
 
 
 def biorevit_other(call):
+    # Картинка
+    photo = open('static/biorevit.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo)
+
     markup = types.InlineKeyboardMarkup(row_width=1)
     item31 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Biorevit_info')
 
@@ -324,6 +332,10 @@ def lipolitiki_info(call):
 
 
 def vokrug_gub(call):
+    # Картинка
+    photo = open('static/vokrug_gub.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo)
+
     markup = types.InlineKeyboardMarkup(row_width=1)
     item15 = types.InlineKeyboardButton("Филлер", callback_data='Filler')
 
@@ -334,6 +346,10 @@ def vokrug_gub(call):
 
 # АКНЕ
 def akne(call):
+    # Картинка
+    photo = open('static/akne.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo)
+
     markup = types.InlineKeyboardMarkup(row_width=1)
     item5 = types.InlineKeyboardButton("Пилинг", callback_data='Piling')
     item6 = types.InlineKeyboardButton("Чистка лица", callback_data='Chistka_lica')
@@ -464,6 +480,10 @@ def vipadenie(call):
 
 
 def mezoterapia_dermaheal(call):
+    # Картинка
+    photo = open('static/mezoterapia_dermaheal.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo)
+
     markup = types.InlineKeyboardMarkup(row_width=1)
     item34 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Mezoterapia_dermaheal_info')
 
