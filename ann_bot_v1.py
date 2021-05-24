@@ -31,7 +31,7 @@ def welcome(message):
         telebot.types.InlineKeyboardButton('Пигментация', callback_data='Pigmentacia'))
     keyboard.row(
         telebot.types.InlineKeyboardButton('Постакне', callback_data='Postakne'),
-        telebot.types.InlineKeyboardButton('Второй подбородок', callback_data='Vtoroy_podborodok'))
+        telebot.types.InlineKeyboardButton('Жировые отложения', callback_data='Zhirovie_otlozheniya'))
 
     # сообщение
     bot.send_message(message.chat.id, 'Какая проблема Вас беспокоит?', reply_markup=keyboard)
@@ -59,7 +59,7 @@ def welcome_new(message):
         telebot.types.InlineKeyboardButton('Пигментация', callback_data='Pigmentacia'))
     keyboard.row(
         telebot.types.InlineKeyboardButton('Постакне', callback_data='Postakne'),
-        telebot.types.InlineKeyboardButton('Второй подбородок', callback_data='Vtoroy_podborodok'))
+        telebot.types.InlineKeyboardButton('Жировые отложения', callback_data='Zhirovie_otlozheniya'))
     # сообщение
     bot.send_message(message.chat.id, 'Какая проблема Вас беспокоит?', reply_markup=keyboard)
 
@@ -161,11 +161,14 @@ def answer(call):
             elif call.data == 'Carboxi_info':
                 carboxi_info(call)
 
-            # ВТОРОЙ ПОДБОРОДОК
-            elif call.data == 'Vtoroy_podborodok':
-                vtoroy_podborodok(call)
-            elif call.data == 'Lipolitiki':
-                lipolitiki(call)
+            # ЖИРОВЫЕ ОТЛОЖЕНИЯ
+            elif call.data == 'Zhirovie_otlozheniya':
+                zhirovie_otlozheniya(call)
+            elif call.data == 'Lipolitiki_zhir':
+                lipolitiki_zhir(call)
+            elif call.data == 'Lipolitiki_zhir_info':
+                lipolitiki_zhir_info(call)
+
 
     except Exception as e:
         print(repr(e))
@@ -586,13 +589,32 @@ def carboxi_info(call):
 
 
 # ВТОРОЙ ПОДБОРОДОК
-def vtoroy_podborodok(call):
+def zhirovie_otlozheniya(call): 
     markup = types.InlineKeyboardMarkup(row_width=1)
-    item18 = types.InlineKeyboardButton("Липолитики", callback_data='Lipolitiki')
+    item40 = types.InlineKeyboardButton("Липолитики", callback_data='Lipolitiki_zhir')
 
-    markup.add(item18)
-    bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Второй подбородок"._\n\n'
+    markup.add(item40)
+    bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Жировые отложения"._\n\n'
                                            '*Выберите процедуру* ↓', reply_markup=markup, parse_mode="Markdown")
+
+
+def lipolitiki_zhir(call):
+    markup = types.InlineKeyboardMarkup(row_width=1)
+    item41 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Lipolitiki_zhir_info')
+
+    markup.add(item41)
+    bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Липолитики"._\n\n'
+                                           '*Непрямые липолитики:* от 2500₽', reply_markup=markup, parse_mode="Markdown")
+
+
+def lipolitiki_zhir_info(call):
+    bot.send_message(call.message.chat.id, 'Непрямой липолитик – это препарат, который превращает жир в воду, '
+                                           'а вода уже выводится из организма по системе микрососудов. '
+                                           'Назначают липолитики как финальную часть комплексной терапии, '
+                                           'чтобы убрать зоны-ловушки: жировые складки над коленями, '
+                                           'небольшое количество жира на животе или под подбородком, '
+                                           'галифе на бедрах. Важно при этом соблюдать и другие рекомендации: '
+                                           'например, режим питания и тренировок.', parse_mode="Markdown")
 
 
 @bot.message_handler(content_types=['text'])
