@@ -102,6 +102,11 @@ def answer(call):
                 vokrug_gub(call)
             elif call.data == 'Filler':
                 filler(call)
+            # 5.Лица и шеи
+            elif call.data == 'Lica_i_shei':
+                lica_i_shei(call)
+            elif call.data == 'Biorevit':
+                biorevit(call)
 
             # АКНЕ
             elif call.data == 'Akne':
@@ -169,7 +174,6 @@ def answer(call):
             elif call.data == 'Lipolitiki_zhir_info':
                 lipolitiki_zhir_info(call)
 
-
     except Exception as e:
         print(repr(e))
 
@@ -185,8 +189,9 @@ def morshini(call):
     item2 = types.InlineKeyboardButton("Вокруг глаз", callback_data='Vokrug_glaz')
     item3 = types.InlineKeyboardButton("Носогубные", callback_data='Nosogubnie')
     item4 = types.InlineKeyboardButton("Вокруг губ", callback_data='Vokrug_gub')
+    item42 = types.InlineKeyboardButton("Лица и шеи", callback_data='Lica_i_shei')
 
-    markup.add(item1, item2, item3, item4)
+    markup.add(item1, item2, item3, item4, item42)
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Морщины"._\n\n'
                                            '*Морщины где?*', reply_markup=markup, parse_mode="Markdown")
 
@@ -219,17 +224,6 @@ def botox_info(call):
                                            'дней после инъекции, достигает пика на второй-третьей неделе '
                                            'и постепенно снижается через четыре-пять месяцев.',
                      parse_mode="Markdown")
-
-
-def biorevit(call):
-    markup = types.InlineKeyboardMarkup(row_width=1)
-    item31 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Biorevit_info')
-
-    markup.add(item31)
-    bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Биоревитализация"._\n\n'
-                                           '*Hyaron:* 3000₽\n'
-                                           '*Femegyl Биолифт:* 6000₽\n'
-                                           '*Aquashine:* 7800₽', reply_markup=markup, parse_mode="Markdown")
 
 
 def biorevit_info(call):
@@ -305,6 +299,25 @@ def vokrug_gub(call):
     markup.add(item15)
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Вокруг губ"._\n\n'
                                            '*Выберите процедуру* ↓', reply_markup=markup, parse_mode="Markdown")
+
+
+def lica_i_shei(call):
+    markup = types.InlineKeyboardMarkup(row_width=1)
+    item43 = types.InlineKeyboardButton("Биоревитализация", callback_data='Biorevit')
+
+    markup.add(item43)
+    bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Лица и шеи"._\n\n'
+                                           '*Выберите процедуру* ↓', reply_markup=markup, parse_mode="Markdown")
+
+
+def biorevit(call):
+    markup = types.InlineKeyboardMarkup(row_width=1)
+    item31 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Biorevit_info')
+
+    markup.add(item31)
+    bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Биоревитализация"._\n\n'
+                                           '*Hyaron:* 4000₽\n'
+                                           '*Femegyl Биолифт:* 6000₽', reply_markup=markup, parse_mode="Markdown")
 
 
 # АКНЕ
