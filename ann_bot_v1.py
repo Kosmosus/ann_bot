@@ -95,8 +95,8 @@ def answer(call):
                 nosogubnie(call)
             elif call.data == 'Filler':
                 filler(call)
-            elif call.data == 'Lipolitiki_info':
-                lipolitiki_info(call)
+            elif call.data == 'Filler_info':
+                filler_info(call)
             # 4.Вокруг губ.
             elif call.data == 'Vokrug_gub':
                 vokrug_gub(call)
@@ -276,7 +276,7 @@ def botox_other(call):
 
     markup.add(item30)
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Ботокс"._\n\n'
-                                           '*Все морщины вокруг глаз:* от 2400₽ до 5600₽\n',
+                                           '*Все морщины вокруг глаз:* от 2400₽ до 5600₽',
                      reply_markup=markup, parse_mode="Markdown")
 
 
@@ -296,22 +296,6 @@ def nosogubnie(call):
     markup.add(item15)
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Носогубные"._\n\n'
                                            '*Выберите процедуру* ↓', reply_markup=markup, parse_mode="Markdown")
-
-
-def lipolitiki(call):
-    markup = types.InlineKeyboardMarkup(row_width=1)
-    item33 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Lipolitiki_info')
-
-    markup.add(item33)
-    bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Липолитики"._\n\n'
-                                           '*Light Fit:* 2500₽\n', reply_markup=markup, parse_mode="Markdown")
-
-
-def lipolitiki_info(call):
-    bot.send_message(call.message.chat.id, 'Препарат активен в зонах носогубных валиков, области брылей '
-                                           'и двойного подбородка. Заметные изменения видны уже '
-                                           'после второй процедуры, сокращая жир на 2-3 мм за '
-                                           'одно применение.')
 
 
 def vokrug_gub(call):
@@ -592,7 +576,8 @@ def lipolitiki_zhir(call):
 
     markup.add(item41)
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Липолитики"._\n\n'
-                                           '*Непрямые липолитики:* от 2500₽', reply_markup=markup, parse_mode="Markdown")
+                                           '*Непрямые липолитики:* от 2500₽', reply_markup=markup,
+                     parse_mode="Markdown")
 
 
 def lipolitiki_zhir_info(call):
