@@ -201,10 +201,6 @@ def lob(call):
 
 
 def botox(call):
-    # Картинка
-    photo = open('static/botox.png', 'rb')
-    bot.send_photo(call.message.chat.id, photo)
-
     markup = types.InlineKeyboardMarkup(row_width=1)
     item30 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Botox_info')
 
@@ -226,10 +222,6 @@ def botox_info(call):
 
 
 def biorevit(call):
-    # Картинка
-    photo = open('static/biorevit.png', 'rb')
-    bot.send_photo(call.message.chat.id, photo)
-
     markup = types.InlineKeyboardMarkup(row_width=1)
     item31 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Biorevit_info')
 
@@ -251,10 +243,6 @@ def biorevit_info(call):
 
 
 def filler(call):
-    # Картинка
-    photo = open('static/filler.png', 'rb')
-    bot.send_photo(call.message.chat.id, photo)
-
     markup = types.InlineKeyboardMarkup(row_width=1)
     item32 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Filler_info')
 
@@ -283,10 +271,6 @@ def vokrug_glaz(call):
 
 
 def botox_other(call):
-    # Картинка
-    photo = open('static/botox_other.png', 'rb')
-    bot.send_photo(call.message.chat.id, photo)
-
     markup = types.InlineKeyboardMarkup(row_width=1)
     item30 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Botox_info')
 
@@ -297,10 +281,6 @@ def botox_other(call):
 
 
 def biorevit_other(call):
-    # Картинка
-    photo = open('static/biorevit.png', 'rb')
-    bot.send_photo(call.message.chat.id, photo)
-
     markup = types.InlineKeyboardMarkup(row_width=1)
     item31 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Biorevit_info')
 
@@ -335,10 +315,6 @@ def lipolitiki_info(call):
 
 
 def vokrug_gub(call):
-    # Картинка
-    photo = open('static/vokrug_gub.png', 'rb')
-    bot.send_photo(call.message.chat.id, photo)
-
     markup = types.InlineKeyboardMarkup(row_width=1)
     item15 = types.InlineKeyboardButton("Филлер", callback_data='Filler')
 
@@ -474,6 +450,10 @@ def mezoterapia_info(call):
 
 # ВЫПАДЕНИЕ ВОЛОС
 def vipadenie(call):
+    # Картинка
+    photo = open('static/vipadenie.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo)
+
     markup = types.InlineKeyboardMarkup(row_width=1)
     item20 = types.InlineKeyboardButton("Мезотерапия", callback_data='Mezoterapia_dermaheal')
 
@@ -483,10 +463,6 @@ def vipadenie(call):
 
 
 def mezoterapia_dermaheal(call):
-    # Картинка
-    photo = open('static/mezoterapia_dermaheal.png', 'rb')
-    bot.send_photo(call.message.chat.id, photo)
-
     markup = types.InlineKeyboardMarkup(row_width=1)
     item34 = types.InlineKeyboardButton("Подробнее o процедуре", callback_data='Mezoterapia_dermaheal_info')
 
@@ -506,6 +482,10 @@ def mezoterapia_dermaheal_info(call):
 
 # ПИГМЕНТАЦИЯ
 def pigmentacia(call):
+    # Картинка
+    photo = open('static/pigmentacia.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo)
+
     markup = types.InlineKeyboardMarkup(row_width=1)
     item10 = types.InlineKeyboardButton("Пилинг", callback_data='Piling_pigment')
     item11 = types.InlineKeyboardButton("Мезотерапия", callback_data='Mezoterapia_pigment')
@@ -562,6 +542,10 @@ def mezoterapia_pigment_info(call):
 
 # ПОСТАКНЕ
 def postakne(call):
+    # Картинка
+    photo = open('static/postakne.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo)
+
     markup = types.InlineKeyboardMarkup(row_width=1)
     item8 = types.InlineKeyboardButton("Пилинг", callback_data='Piling_pigment')
     item19 = types.InlineKeyboardButton("Мезотерапия", callback_data='Mezoterapia_pigment')
@@ -589,7 +573,11 @@ def carboxi_info(call):
 
 
 # ВТОРОЙ ПОДБОРОДОК
-def zhirovie_otlozheniya(call): 
+def zhirovie_otlozheniya(call):
+    # Картинка
+    photo = open('static/zhirovie_otlozheniya.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo)
+
     markup = types.InlineKeyboardMarkup(row_width=1)
     item40 = types.InlineKeyboardButton("Липолитики", callback_data='Lipolitiki_zhir')
 
@@ -608,7 +596,7 @@ def lipolitiki_zhir(call):
 
 
 def lipolitiki_zhir_info(call):
-    bot.send_message(call.message.chat.id, 'Непрямой липолитик – это препарат, который превращает жир в воду, '
+    bot.send_message(call.message.chat.id, '*Непрямой липолитик* – это препарат, который превращает жир в воду, '
                                            'а вода уже выводится из организма по системе микрососудов. '
                                            'Назначают липолитики как финальную часть комплексной терапии, '
                                            'чтобы убрать зоны-ловушки: жировые складки над коленями, '
