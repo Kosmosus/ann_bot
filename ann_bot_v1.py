@@ -14,7 +14,8 @@ def welcome(message):
     #  клавиатура над полем ввода
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     item0 = types.KeyboardButton("К началу ↑")
-    markup.add(item0)
+    item00 = types.KeyboardButton("☎ Записаться на процедуру")
+    markup.add(item0, item00)
 
     # приветствие
     bot.send_message(message.chat.id, "Здравствуйте, {0.first_name}!\nЯ - <b>{1.first_name}</b>, бот созданный чтобы "
@@ -43,7 +44,8 @@ def welcome_new(message):
     #  клавиатура над полем ввода
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     item0 = types.KeyboardButton("К началу ↑")
-    markup.add(item0)
+    item00 = types.KeyboardButton("☎ Записаться на процедуру")
+    markup.add(item0, item00)
 
     # приветствие
     bot.send_message(message.chat.id, "Здравствуйте ещё раз, {0.first_name}!"
@@ -176,6 +178,11 @@ def answer(call):
 
     except Exception as e:
         print(repr(e))
+
+
+# Запись
+def my_info(message):
+    bot.send_message(message.chat.id, '📞 +79534219598\n➡ Instagram.com/anna_igolkina71')
 
 
 # МОРЩИНЫ
@@ -605,6 +612,8 @@ def lalala(message):
     if message.chat.type == 'private':
         if message.text == 'К началу ↑':
             welcome_new(message)
+        elif message.text == '☎ Записаться на процедуру':
+            my_info(message)
         else:
             bot.send_message(message.chat.id, 'Выберите один вариант из предложенных выше, пожалуйста.')
 
